@@ -6,22 +6,12 @@ html, body {
     padding: 0;
     height: 100%;
     text-align: center;
-    display: flex; /* Flexbox a középre igazításhoz */
+    display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    overflow: hidden; /* Csúszka elrejtése */
-}
-
-.header {
-    color: #fff; /* Fehér szöveg */
-    text-align: center;
-    font-size: 4rem; /* Nagyobb fejléc, reszponzív méret */
-    width: 100%; /* Teljes szélesség */
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 20px 0; /* Párnázás a jobb megjelenésért */
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .content {
@@ -43,6 +33,7 @@ html, body {
     height: auto;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: auto; /* Görgethetőség kisebb kijelzőkön */
 }
 
 table {
@@ -64,31 +55,21 @@ th, td {
     font-style: italic; /* (Opcionális) dőlt betű a kiemeléshez */
 }
 
-/* Reszponzív design - kisebb kijelzőkhöz (például telefonok) */
+/* Reszponzív design - kisebb kijelzőkhöz */
 @media (max-width: 768px) {
-    .header {
-        font-size: 3rem; /* Kisebb fejléc betűméret */
-    }
-
     th, td {
         font-size: 2rem; /* Táblázat kisebb szövegmérete */
     }
-
     .small-gray-text {
-        font-size: 1.8rem; /* Még kisebb szövegméret szürkéhez */
+        font-size: 1.8rem; /* Kisebb szövegméret szürkéhez */
     }
 }
 
-/* Reszponzív design - nagyobb kijelzőkhöz (például 4K monitor) */
+/* Reszponzív design - nagyobb kijelzőkhöz */
 @media (min-width: 2560px) {
-    .header {
-        font-size: 5rem; /* Nagyobb fejléc betűméret 4K-hoz */
-    }
-
     th, td {
         font-size: 4rem; /* Táblázat nagyobb szövegmérete */
     }
-
     .small-gray-text {
         font-size: 3.5rem; /* Nagyobb szövegméret szürkéhez */
     }
