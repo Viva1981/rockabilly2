@@ -25,6 +25,7 @@ html, body {
     height: auto;
     padding: 0;
     box-sizing: border-box;
+    margin-top: 20px; /* Hozzáadás: Távolság a tetejétől */
 }
 
 .table-container {
@@ -34,6 +35,7 @@ html, body {
     padding: 0;
     box-sizing: border-box;
     overflow-x: auto; /* Görgethetőség kisebb kijelzőkön */
+    margin-top: 10px; /* Hozzáadás: Finomhangolás távolságra */
 }
 
 table {
